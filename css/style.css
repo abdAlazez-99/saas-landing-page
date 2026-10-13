@@ -105,11 +105,14 @@ header .btns {
 }
 
 /* end landing */
-/* work together */
-@media (max-width: 767px) {
-  .work-together .text {
-    order: -1;
-  }
+/* use as extension */
+.use-ex {
+  background-color: var(--primary-deep-blue);
+  color: var(--bg-light)
 }
-
-/* end work together */
+/* end use as extension */
+/* your needs */
+.your-needs h2::after{
+  left: 50px
+}
+/* end your needs */

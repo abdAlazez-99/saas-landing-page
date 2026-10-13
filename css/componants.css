@@ -53,7 +53,7 @@ h2 {
   font-size: clamp(1.563rem, 0.357rem + 3.857vw, 3.25rem);
   position: relative;
   width: fit-content;
-
+  z-index: 1;
   &::after {
     content: "";
     position: absolute;
@@ -142,5 +142,9 @@ h2 {
     margin-top: var(--px-2x)
   }
 }
-
+@media (max-width: 767px) {
+  .replace-order .text{
+    order: -1;
+  }
+}
 /* end same-st */
