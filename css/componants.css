@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+textarea,
+input[type=submit] {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+a {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(1.563rem, 0.357rem + 3.857vw, 3.25rem);
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 20px;
+    mask-image: url(../images/underline.svg);
+    mask-size: contain;
+    left: 50%;
+    bottom: -5px;
+    background-color: var(--accent-yellow);
+    z-index: -1;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    margin: auto;
+  }
+}
+
+.container {
+  width: min(90vw, 1300px);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-shape {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity var(--duration);
+
+  &:hover {
+    opacity: .9
+  }
+}
+
+.sec-pd {
+  padding-block: var(--px-6x);
+}
+
+/* same-st */
+.same-st .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--px-4x);
+}
+
+.same-st .text {
+  flex: 1 1 50%;
+
+  h1 {
+    font-size: clamp(1.875rem, 0.357rem + 4.857vw, 4rem);
+    max-width: 550px;
+  }
+
+  p {
+    margin-block: var(--px-2x);
+    line-height: 1.6;
+    max-width: 550px;
+  }
+
+  a {
+    background: var(--primary-bright-blue);
+    text-transform: capitalize;
+    color: var(--bg-light)
+  }
+}
+
+.same-st figure {
+  max-width: 500px;
+  flex: 1 1 50%;
+}
+
+@media (max-width: 767px) {
+  .same-st .text {
+    text-align: center;
+    margin-top: var(--px-2x)
+  }
+}
+
+/* end same-st */
